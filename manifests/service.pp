@@ -8,7 +8,7 @@ class haveged::service {
     default => 'stopped',
   }
 
-  service { 'havegedd':
+  service { 'haveged':
     ensure  => $ensure,
     enable  => $haveged::enable,
     require => Class['haveged::config'],
