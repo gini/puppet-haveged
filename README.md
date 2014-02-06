@@ -18,13 +18,20 @@ Example:
 
     class { 'haveged': }
 
+    or
+
+    include haveged
+
 
 Supported Platforms
 -------------------
 
 The module has been tested on the following operating systems. Testing and patches for other platforms are welcome.
 
-* Debian Linux 7.1 (Wheezy)
+* Debian Linux 6 (squeeze)
+ * only trough squeeze-backports which are automatically installed as well
+* Debian Linux 7 (wheezy)
+* Debian Linux 8 (jessie)
 
 
 License

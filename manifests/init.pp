@@ -15,7 +15,8 @@ class haveged(
   $version         = 'present',
   $enable          = true,
   $start           = true,
-) {
+  ) inherits haveged::params {
+
   class{'haveged::install': } ->
   class{'haveged::config': } ~>
   class{'haveged::service': } ->
