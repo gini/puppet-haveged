@@ -10,7 +10,7 @@ class haveged::params {
       $pkg_name = 'haveged'
 
       exec {'install-squeeze-backports':
-        command => 'echo "deb http://ftp.de.debian.org/debian-backports squeeze-backports main" > /etc/apt/sources.list.d/debian_squeeze_backports.list && apt-get update',
+        command => 'echo "deb http://archive.debian.org/debian-archive/debian-backports squeeze-backports main" > /etc/apt/sources.list.d/debian_squeeze_backports.list && apt-get update',
         onlyif  => '/bin/bash -c \'[[ `grep -r "squeeze-backports" /etc/apt | wc -l` -eq 0 ]]\'',
         path    => $env_path,
         timeout => 0,
