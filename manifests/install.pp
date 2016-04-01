@@ -3,7 +3,7 @@
 # Install the haveged package.
 #
 class haveged::install {
-  package { 'haveged':
+  package { $pkg_name:
     ensure => $haveged::version,
   }
 }
